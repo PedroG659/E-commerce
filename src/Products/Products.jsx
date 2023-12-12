@@ -2,7 +2,7 @@ import './Products.css'
 
 function Products() {
   return (
-    <div>Products</div>
+    <div>Produtos</div>
   )
 }
 
