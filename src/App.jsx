@@ -1,10 +1,17 @@
 import './App.css'
+import Navigation from './Navigation/Nav'
+import Products from './Products/Products'
+import Recommended from './Recommended/Recommended'
 
 function App() {
 
   return (
-    <div>Hello</div>
-  )
+    <>
+    <Navigation />
+    <Products />
+    <Recommended />
+    </>
+  );
 }
 
-export default App
+export default App;
