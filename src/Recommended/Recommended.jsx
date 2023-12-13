@@ -1,20 +1,21 @@
-import './Recommended.css'
+import Button from "../components/Button";
+import "./Recommended.css";
 
-function Recommended() {
+const Recommended = ({ handleClick }) => {
   return (
     <>
-    <div>
-      <h2 className='recommended-title'>Recomendado</h2>
-      <div className='recommended-flex'>
-        <button className='btns'>Todos os Produtos</button>
-        <button className='btns'>Nike</button>
-        <button className='btns'>Adidas</button>
-        <button className='btns'>Puma</button>
-        <button className='btns'>Vans</button>
+      <div>
+        <h2 className="recommended-title">Recomendados</h2>
+        <div className="recommended-flex">
+          <Button onClickHandler={handleClick} value="" title="Todos os produtos" />
+          <Button onClickHandler={handleClick} value="Nike" title="Nike" />
+          <Button onClickHandler={handleClick} value="Adidas" title="Adidas" />
+          <Button onClickHandler={handleClick} value="Puma" title="Puma" />
+          <Button onClickHandler={handleClick} value="Vans" title="Vans" />
+        </div>
       </div>
-    </div>
     </>
-  )
-}
+  );
+};
 
-export default Recommended
+export default Recommended;
