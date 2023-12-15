@@ -10,7 +10,7 @@ const Sidebar = ({ handleChange }) => {
     <>
       <section className="sidebar">
         <div className="logo-container">
-          <img src={Logo} alt="Logo" style={{ width: '90px', height: '50px', position: 'relative', top:'10px', left:"-40px" }}/>
+          <img src={Logo} alt="Logo" style={{ width: '90px', height: '50px', position: 'relative', top:'15px', left:"-40px" }}/>
         </div>
         <Category handleChange={handleChange} />
         <Price handleChange={handleChange} />
