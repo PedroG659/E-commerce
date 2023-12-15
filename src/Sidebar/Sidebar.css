@@ -19,3 +19,7 @@
   .logo-container h1 {
     margin-top: 1.3rem;
   }
+
+  .logo {
+    size: 20px;
+  }

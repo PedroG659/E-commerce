@@ -2,14 +2,15 @@ import Category from "./Category/Category";
 import Price from "./Price/Price";
 import Colors from "./Colors/Colors";
 import "./Sidebar.css";
-import { PiSneakerLight  } from "react-icons/pi";
+import Logo from "../assets/logo.svg"
 
 const Sidebar = ({ handleChange }) => {
+
   return (
     <>
       <section className="sidebar">
         <div className="logo-container">
-          <h1><PiSneakerLight  size={40}/></h1>
+          <img src={Logo} alt="Logo" style={{ width: '90px', height: '50px', position: 'relative', top:'10px', left:"-40px" }}/>
         </div>
         <Category handleChange={handleChange} />
         <Price handleChange={handleChange} />
