@@ -11,7 +11,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const [query, setQuery] = useState("");
-
+  
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
