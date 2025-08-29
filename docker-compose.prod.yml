@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  app:
+    image: your-username/your-app:prod-${TAG:-latest}
+    container_name: app-prod
+    env_file:
+      - .env.prod
+    ports:
+      - "80:3000"
+    restart: unless-stopped
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+
+  db:
+    image: postgres:13
+    container_name: db-prod
+    env_file:
+      - .env.prod
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '1'
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge
